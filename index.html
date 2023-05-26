@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Javascript-Prov</title> 
+</head>
+<body>
+  <div id="EventDiv">
+
+    <h1 id="demo"></h1>
+    <p id="time"></p>
+    <img id="pic" src="dice-1.png" style=" height: 100px; width: 100px; ">
+  
+
+  </div>
+
+
+  <div class="button-container">
+    <button id="bytBackgrondColor" class = "hover-effect" >Change Bg</button>
+    <button id="button2" class = "hover-effect" >Good vibes</button>
+    <button id="button3" class = "hover-effect" >Time</button> 
+    <button id="button4" class = "hover-effect" >Change picure</button>   
+    <button id="button5" class = "hover-effect" >Hide picture</button>   
+    <button id="button6" class = "hover-effect" >Show Picture</button>
+    <button class = "hover-effect">Header</button>
+    <button class = "hover-effect" >Remove Header</button> 
+    <button class = "hover-effect" >show Header</button> 
+
+  
+  </div>
+
+	
+
+
+  <script>
+    
+    const changeBgButton = document.getElementById("bytBackgrondColor"); 
+    changeBgButton.addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+    });
+  
+
+
+
+
+    const goodVibesButton = document.getElementById("button2"); 
+    goodVibesButton.addEventListener("click", function() {
+        demoElement.textContent = "Be the best version of you!";  
+    });
+  
+
+    
+    const timeButton = document.getElementById("button3");
+    timeButton.addEventListener("click", function() {
+      
+        const timeElement = document.getElementById("time");
+      
+        const currentTime = new Date().toLocaleTimeString();
+      timeElement.textContent = "Current time: " + currentTime;
+    });
+  
+    
+    
+    const changePictureButton = document.getElementById("button4"); 
+    changePictureButton.addEventListener("click", function() {
+      
+        const pictureElement = document.getElementById("pic");
+      
+        pictureElement.src = "dice-6.png";
+    });
+
+    
+    const hidePictureButton = document.getElementById("button5"); 
+    hidePictureButton.addEventListener("click", function() { 
+      
+        const pictureElement = document.getElementById("pic");
+      
+        pictureElement.style.display = "none";
+    });
+  
+    
+    
+    const showPictureButton = document.getElementById("button6"); 
+    showPictureButton.addEventListener("click", function() {
+      
+        const pictureElement = document.getElementById("pic");
+      
+        pictureElement.style.display = "block";
+    });
+  
+    
+    const headerButton = document.querySelector(".button-container button:nth-child(7)");
+    const demoElement = document.getElementById("demo");
+    headerButton.addEventListener("click", function() {
+      demoElement.textContent = "New Header Text";
+    });
+  
+    
+    const removeHeaderButton = document.querySelector(".button-container button:nth-child(8)");
+    removeHeaderButton.addEventListener("click", function() {
+      demoElement.style.display = "none";
+    });
+  
+    
+    const showHeaderButton = document.querySelector(".button-container button:nth-child(9)");
+    showHeaderButton.addEventListener("click", function() {
+      demoElement.style.display = "block";  
+    }); 
+  </script> 
+  
+
+
+
+</body>
+</html> 
+
+    
